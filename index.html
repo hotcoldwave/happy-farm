@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <h1>Happy Farm</h1>
+  </header>
+  <div id='message-bar'></div>
+  <main>
+    <canvas id="canvas" width="640" height="640"></canvas>
+    <div id="menu">
+      <button class="button-main" id="start-button">Start Game</button>
+      <button class="button-main" id="end-button" disabled="true">End Game</button>
+      <h3>Fill the Field:</h3>
+      <div id="items-pick">
+        <img src="img/seed.png" alt="Seed picture" id="seed" width="90px">
+        <img src="img/chicken.gif"" alt=" Chicken picture" id="chicken" width="100px">
+        <img src="img/cow.gif" alt="Cow picture" id="cow" width="100px">
+        <p id="seed-price"></p>
+        <p id="chicken-price"></p>
+        <p id="cow-price"></p>
+      </div>
+      <div id="status">
+        <p>money:<input type="text" id="money-amount" value="0" size="7" readonly></p>
+        <p>
+          milk:<input type="text" id="milk-amount" value="0" size="5" readonly>
+          <button id="sell-milk-button" class="button-secondary">sell:</button>
+          <input type="number" id="milk-for-sell">
+        </p>
+        <p>
+          eggs:<input type="text" size="5" id="eggs-amount" value="0" readonly>
+          <button id="sell-eggs-button" class="button-secondary">sell:</button>
+          <input type="number" id="eggs-for-sell">
+        </p>
+        <p>
+          <img src="img/wheat.png" alt="Wheat picture" id="wheat" width="70px">
+          <input type="text" size="5" id="wheat-amount" value="0" readonly>
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <a href="https://github.com/hotcoldwave" target="_blank">
+    <i class="nes-icon github is-large"></i>
+    </a>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
+</html>

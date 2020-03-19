@@ -1,0 +1,14 @@
+{
+  "name": "happy-farm",
+  "version": "1.0.0",
+  "description": "Тестовое задание для вакансии Front-end / HTML5 разработчик»",
+  "private": true,
+  "scripts": {
+    "serve": "http-server ."
+  },
+  "author": "Egor Kukobin",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.1"
+  }
+}
