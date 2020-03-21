@@ -22,12 +22,23 @@
       <button class="button-main" id="end-button" disabled="true">End Game</button>
       <h3>Fill the Field:</h3>
       <div id="items-pick">
-        <img src="img/seed.png" alt="Seed picture" id="seed" width="90px">
-        <img src="img/chicken.gif"" alt=" Chicken picture" id="chicken" width="100px">
-        <img src="img/cow.gif" alt="Cow picture" id="cow" width="100px">
-        <p id="seed-price"></p>
-        <p id="chicken-price"></p>
-        <p id="cow-price"></p>
+        <div class = "hover">
+          <img src="img/seed.png" alt="Seed picture" id="seed" width="90px">
+          <p id="seed-price"> </p>
+        </div>
+        <div class = "hover">
+          <img src="img/chicken.gif"" alt=" Chicken picture" id="chicken" width="100px">
+          <p id="chicken-price"></p>
+        </div>
+        <div class = "hover">
+          <img src="img/cow.gif" alt="Cow picture" id="cow" width="100px">
+          <p id="cow-price" ></p>
+        </div>
+      </div>
+      <h3>Feed the animals:</h3>
+      <div class = "feed-section">
+        <img src="img/wheat.png" alt="Wheat picture" id="wheat" width="70px" class = "hover">
+        <input type="text" size="5" id="wheat-amount" value="0" readonly>
       </div>
       <div id="status">
         <p>money:<input type="text" id="money-amount" value="0" size="7" readonly></p>
@@ -41,10 +52,7 @@
           <button id="sell-eggs-button" class="button-secondary">sell:</button>
           <input type="number" id="eggs-for-sell">
         </p>
-        <p>
-          <img src="img/wheat.png" alt="Wheat picture" id="wheat" width="70px">
-          <input type="text" size="5" id="wheat-amount" value="0" readonly>
-        </p>
+       
       </div>
     </div>
   </main>
