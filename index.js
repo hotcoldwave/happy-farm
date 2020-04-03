@@ -8,6 +8,7 @@
     y: cvs.offsetTop
   };
 
+  // let this;
   const wheat = new Image();
   const seed = new Image();
   const chicken = new Image();
@@ -182,19 +183,27 @@
 
   class Game {
     constructor(startMoney) {
-      this.gameObjects = [];
-      this.stats = {
+      if (typeof Game.instance === 'object') {
+        return Game.instance;
+      }
+        this.gameObjects = [];
+        this.stats = {
         milk: 0,
         eggs: 0,
         wheat: 0,
         money: startMoney,
-      };
-
+      }
       this.onClickCell = this.onClickCell.bind(this);
       this.onSellEggs = this.onSellEggs.bind(this);
       this.onSellMilk = this.onSellMilk.bind(this);
       this.showMessage = this.showMessage.bind(this);
-    };
+      Game.instance = this;
+      return this;
+      };
+      // this.onClickCell = this.onClickCell.bind(this);
+      // this.onSellEggs = this.onSellEggs.bind(this);
+      // this.onSellMilk = this.onSellMilk.bind(this);
+      // this.showMessage = this.showMessage.bind(this);
 
     getCellItem(clickedCell) {
       for (let item of this.gameObjects) {
@@ -372,11 +381,11 @@
 
   guiControls.startButton.onclick = () => {
     addHandlers();
-    guiControls.startButton.disabled = true;
-    guiControls.endButton.disabled = false;
+    // guiControls.startButton.disabled = true;
+    // guiControls.endButton.disabled = false;
     startGame();
   }
 
-  guiControls.endButton.onclick = () => location.reload();
+  // guiControls.endButton.onclick = () => location.reload();
 
 })();
